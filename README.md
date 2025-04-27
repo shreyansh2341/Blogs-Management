@@ -12,10 +12,6 @@ Built with a focus on simplicity, scalability, and clean code structure.
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
-- [Folder Structure](#-folder-structure)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
 
 ---
 
