@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="/css/editpost.css">
+</head>
+
+<a href="/admin/dashboard">Back</a>
+<div class="admin-title">
+    <h2>View / Edit Blogs</h2>
+
+    <form action="/delete-posts/<%= data._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Blog">
+    </form>
+</div>
+
+<form action="/admin/edit-posts/<%= data._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="<%= data.title %>">
+
+    <label for="body">Description:</label>
+    <textarea name="body"><%= data.body %></textarea>
+
+    <label for="image">Image:</label>
+    <input type="file" name="image" accept="image/*">
+
+    <input type="submit" value="Update Blog">
+</form>
+

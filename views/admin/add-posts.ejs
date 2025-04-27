@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="/css/addpost.css">
+</head>
+
+<a href="/admin/dashboard"> Back</a>
+<div class="admin-title">
+    <h2>Add New Blogs</h2>
+</div>
+
+<form action="/admin/add-posts" method="POST" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" name="title" placeholder="Add Title Of the Blogs" required>
+
+    <label for="body">Description:</label>
+    <textarea name="body" placeholder="Add The Description of the Blogs" cols="50" rows="10" required></textarea>
+
+    <label for="image">Image:</label>
+    <input type="file" name="image" accept="image/*">
+
+    <input type="submit" value="Add Blog">
+</form>

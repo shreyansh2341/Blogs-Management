@@ -1,0 +1,65 @@
+<%- include ('./partials/header') %>
+
+    <section class="banc fir">
+        <div class="about2">
+            <h1>Blogs</h1>
+        </div>
+    </section>
+
+    <div class="sec-tion">
+        <div class="te-xt">
+            <h1>Welcome To <br><span style="color: #007AFF;">ACCU</span> DESIGN Blogs</h1>
+            <p>- Our Custom Built Training Facility Based At Our North East HQ. <br><br>
+                - We Provide Specific, Hands On Industry Training. All Certified In A
+                Space That Allows You To Absorb, Practice And Achieve Your New
+                Skills.
+                <a href="" class="but-ton">Read More</a>
+        </div>
+        <img src="../images/blo.png" alt="">
+        </p>
+
+    </div>
+
+    <!-- Card section -->
+<div class="car-d">
+    <% data.forEach(post => { %>
+        <div class="car-d">
+            <img src="<%= post.image ? '/' + post.image : '../images/bl.png' %>" alt="Blog Image">
+            <div class="cont-ain">
+                <a href="/blogPosts/<%= post._id %>">
+                    <h2><%= post.title %></h2>
+                </a>
+                <p><%= post.body %></p>
+                <span><%= post.createdAt.toDateString() %></span>
+                <a href="/blogPosts/<%= post._id %>" class="but-ton">Read More</a>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+
+    <!-- Pagination -->
+
+        <div class="pagination">
+            <% if (prevPage) { %>
+                <a href="/blog?page=<%= prevPage %>">&lt; Previous</a>
+            <% } %>
+        
+            <span> Page <%= current %> </span>
+        
+            <% if (nextPage) { %>
+                <a href="/blog?page=<%= nextPage %>">Next &gt;</a>
+            <% } %>
+        </div>
+        
+   
+    <a href="../html/Blog.html"><img src="../accu images/upward-arrow.png" alt=""
+            style="right: 1%; top: 90%; width: 50px; padding-bottom: 5%;" class="scrolltop"></a>
+
+   <%- include('./partials/footer') %>
+
+    <script src="../js/form.js"></script>
+    <script src="../js/search-bar.js"></script>
+</body>
+
+</html>

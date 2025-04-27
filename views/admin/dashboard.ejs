@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+
+
+<div class="admin-title">
+    <h2>Posts</h2>
+    <a href="/admin/add-posts" class="button">+ Create Post</a>
+</div>
+
+<ul class="admin-posts">
+
+    <% data.forEach(posts => { %>
+     <li>
+
+        <a href="/blogPosts/<%= posts._id %>">
+            <%= posts.title %>
+            <%= posts.image %>
+
+        </a>
+
+        <div class="admin-blogs-controls">
+
+            <a href="/admin/edit-posts/<%= posts._id %>"><button>Edit</button></a>
+
+            <form action="/admin/delete-posts/<%= posts._id %>?_method=DELETE" method="POST" class="delete-form">
+                <input type="submit" value="Delete" class="delete-button">
+            </form>
+        </div>
+
+     </li>
+    <% }) %>
+
+</ul>

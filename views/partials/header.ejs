@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=  title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Aoa link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href=".https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="headimg">
+        <img src="../accu images/logo banner.png" alt="">
+    </div>
+    <div class="inside">
+        <img src="../accu images/inside logo.png" alt="">
+        <div class="quote">
+            <button><a href="">Get a Free Quote >></a></button>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="navlist" id="navlist">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/our-services.html">Our Services</a></li>
+            <li><a href="../html/Blog.html">Blogs</a></li>
+            <li><a href="../html/About.html">About Us</a></li>
+            <li><a href="#">Media Gallery</a></li>
+            <li><a href="../html/contact.html">Connect Us</a></li>
+        </ul>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a service..." onfocus="keepSearchOpen()" onkeyup="showSuggestions()">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+    </nav>
+          <div class="suggestions" id="suggestions"></div>
+      </div>
+      </nav>
